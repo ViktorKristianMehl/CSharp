@@ -31,20 +31,60 @@ comment
 #endregion
 
 #region Variables
-Console.WriteLine("What is your name?");
+Console.WriteLine("Did you ever hear the tragedy of darth plagueius the wise?");
 
-//<Type> <Name> = <Value> ;
-string myString = "This is how to define a string variable!";
+string firstanswer = Console.ReadLine();
+bool Darth = false;
+if (firstanswer == "no")
+{
+    Darth = true;
+}
+
+if (Darth == true)
+{
+    Console.WriteLine("I thought not, its not a story the jedi would tell you");
+    Console.ReadLine();
+    Console.WriteLine("It’s a Sith legend.");
+    Console.ReadLine();
+    Console.WriteLine("Darth Plagueius was a sith lord so powerful he could save others from dying.");
+    Console.ReadLine();
+    Console.WriteLine("(You need to answer: wow)");
+    Console.ReadLine();
+    string secondanswer = Console.ReadLine();
+    bool curiousity = false;
+    if (secondanswer == "wow")
+    {
+        curiousity = true;
+    }
+    if (curiousity == true)
+    {
+        Console.WriteLine("yes he could");
+        Console.ReadLine();
+    }
+    else
+    {
+        Console.WriteLine("!!!!");
+        Console.ReadLine();
+    }
+    // dette virker ikke. Den svarer altid med "!!!" selvom man skriver det rigtigt
+}
+
+else
+{
+    Console.WriteLine("ok then.");
+    Console.ReadLine();
+}
+
 
 //Reading a string from the console
-myString = Console.ReadLine();
+// myString = Console.ReadLine();
 
 //Writing it back to the console
-Console.WriteLine("Aaah, welcome " + myString + ", nice to meet you!");
+// Console.WriteLine("Aaah, welcome " + myString + ", nice to meet you!");
 #endregion
 
-#region Data types
-Console.WriteLine("Do you want to learn about the simplest data types?");
+// #region Data types
+// Console.WriteLine("Do you want to learn about the simplest data types?");
 /*
 * The four main basic types we we will work with in the beginning are:
 * bool, Int, Float and String   
@@ -60,27 +100,30 @@ Console.WriteLine("Do you want to learn about the simplest data types?");
 * https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types
 */
 
-string answer = Console.ReadLine();
 
-bool LearnAboutDataTypes = false;
-if(answer == "yes"){
+// string answer = Console.ReadLine();
+
+// bool LearnAboutDataTypes = false;
+// if (answer == "yes")
+/*{
     LearnAboutDataTypes = true;
 }
 
-if(LearnAboutDataTypes == true){
+if (LearnAboutDataTypes == true)
+{
     Console.WriteLine("Then you have come to the right place!");
     Console.WriteLine("The 'bool' type can either be 'true' or 'false', nothing more, nothing less.");
     Console.WriteLine("When you answered 'yes', a bool named 'LearnAboutDataTypes' was set to 'true'");
     Console.WriteLine("And allowed for these messages!");
     Console.WriteLine("...");
     Console.ReadLine();
-    
+
     Console.WriteLine("Now... The next data type we are gonna talk about is the integer, called an 'int'");
     Console.WriteLine("It is used to store whole numbers, like 1,2,3,4 and so on.");
     Console.WriteLine("Try inserting an integer now:");
     string inputFromConsole = Console.ReadLine();
     int number = int.Parse(inputFromConsole);
-    
+
     Console.WriteLine("I have now converted a text string into an integer!");
     number = number + 1;
     //number++;
@@ -92,9 +135,9 @@ if(LearnAboutDataTypes == true){
     Console.WriteLine("Next up we have the Float data type");
     Console.WriteLine("Float is decimal numbers, you can do math on it, just as we did with the integer");
     Console.WriteLine("Remember to use 'f'!");
-    float OneThird = 1.0f/3.0f; //Notice the 'f' to indicate this number is a float value
+    float OneThird = 1.0f / 3.0f; //Notice the 'f' to indicate this number is a float value
     Console.WriteLine("Like for example 1.0f/3.0f, which gives : " + OneThird);
-    Console.WriteLine("where as 1/3 gives = " + 1/3 + ". Because the computer thinks it is working with whole numbers (integers)");
+    Console.WriteLine("where as 1/3 gives = " + 1 / 3 + ". Because the computer thinks it is working with whole numbers (integers)");
     Console.WriteLine("...");
     Console.ReadLine();
 
