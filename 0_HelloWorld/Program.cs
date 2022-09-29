@@ -1,4 +1,20 @@
-﻿
+﻿string LangsomTekst(string input)
+{
+    if (input.Length > 0)
+    {
+        string firstCharacter = input.Substring(0, 1);
+        string restOfInput = input.Remove(0, 1);
+        Console.Write(firstCharacter);
+        Thread.Sleep(25);
+        return LangsomTekst(restOfInput);
+    }
+    else
+    {
+        return "";
+    }
+}
+
+
 //Change appearance of Console
 Console.Title = "Matrix";
 Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -164,6 +180,9 @@ if (loss == true)
         }
     }
 }
+string finalText = "Your journey is now over! \n the end";
+LangsomTekst(finalText);
+Console.WriteLine(finalText);
 Console.ReadLine();
 
 
